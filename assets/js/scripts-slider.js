@@ -16,9 +16,11 @@
 			{ src:'assets/images/bg9.jpg'},
 		
 		  ]
-		})('overlay', {
-		  src:'assets/images/06.png'
-		});		
+		})
+		// ('overlay', {
+		//   src:'assets/images/06.png'
+		// })
+		;		
 
 				
 

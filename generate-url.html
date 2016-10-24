@@ -1,13 +1,59 @@
-<html>
-<body>
-	
-	<input id="input" type="text" value="">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"><title>Spinver</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
-	<button id="button">Gerar</button>
-	<br>
-	<h1 id="output"></h1>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    
+</head>
+<body style="background-color: rgba(230, 158, 0, 0.76);">
 
-	<script>
+	<div class="container" >
+
+		<div class="row">
+			<div class="col-md-12" style="padding-top: 10vh; color: white; margin-bottom: 7vh; text-align: center">
+				<h2 style="display: table;margin: auto;">Bem-vindo! Por favor, inserir um URL que você gostaria criptografar:</h2>
+				
+			</div>
+			
+		</div>
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2" style="padding-top: 10vh">
+				<input  id="input" class="form-control" style="display: table; margin: auto; " type="text" value="">
+				<br><br>
+				<button id="button" class="btn btn-lg btn-primary btn-default" style="display: table; margin: auto; ">1º Gerar</button>
+				
+			</div>
+			
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-12" style="display: table; margin: auto">
+				<br>
+				<h3 style="color: white">Este é seu link criptografado:</h3>
+				<br>
+				<div class="col-xs-7" style="padding: 0">
+				<textarea name="" id="output" rows="4" style="width: 100%; text-align: center; display: inline;">
+					
+				</textarea>
+				</div>
+
+				<div class="col-xs-5">
+					<button id="copyButton" class="btn btn-lg btn-primary btn-default" style="display:table; margin-right: auto; margin-top: 2vh" data-clipboard-action="copy" data-clipboard-target="#output">2º Copiar</button>
+				</div>
+			</div>
+		</div>
+				
+		</div>
+	</div>
+</div>
+
+<script>
 				
 		var inputURL = document.getElementById("input");
 		var button =  document.getElementById("button");
@@ -23,10 +69,17 @@
 			
 		});
 
+</script>
 
-	</script>
+
+<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+
+<script>
+	var clipboard = new Clipboard('#copyButton');
+
+</script>
 
 </body>
-
 </html>
-
