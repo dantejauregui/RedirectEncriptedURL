@@ -13,7 +13,7 @@
 		
 		$.vegas('slideshow', {
 		  backgrounds:[
-			{ src:'assets/images/bg9.jpg'},
+			{ src:'assets/images/bg8.jpg'},
 		
 		  ]
 		})

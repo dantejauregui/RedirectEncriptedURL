@@ -172,7 +172,7 @@ p{
 }
 
 .more-links a, .social a {
-	border: 2px solid #fff;
+	border: 2px solid #777;
 	display: inline-block;
 	font-size: 13px;
 	letter-spacing: 2px;
@@ -192,7 +192,7 @@ p{
 
 .more-links a{
 	border-radius: 25px !important; 
-	width: 160px !important;
+	width: 40%;
 }	
 	
 .social a {
@@ -374,6 +374,30 @@ h1, h2, h3, h4 {
 .title{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	text-transform:uppercase;
-	font-size: 48px;
+	text-transform:none;
+	font-size: 40px;
+}
+
+
+@media only screen and (max-width: 799px) {
+    .imgResponsive{
+		width: 70%;
+	}
+}
+@media only screen and (min-width: 800px) {
+    .imgResponsive{
+		width: 50%; 
+	}
+}
+
+
+@media only screen and (max-width: 799px) {
+    .buttonResponsive{
+		width: 70% !important;
+	}
+}
+@media only screen and (min-width: 800px) {
+    .buttonResponsive{
+		width: 50% !important; 
+	}
 }

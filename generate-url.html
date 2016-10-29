@@ -22,11 +22,19 @@
 			
 		</div>
 
+		
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2" style="padding-top: 10vh">
-				<input  id="input" class="form-control" style="display: table; margin: auto; " type="text" value="">
-				<br><br>
-				<button id="button" class="btn btn-lg btn-primary btn-default" style="display: table; margin: auto; ">1º Gerar</button>
+				<input  required id="input" class="form-control" style="display: table; margin: auto; " type="text" value="" placeholder="URL a converter">
+				<br>
+				<input  required id="campaingTitle" class="form-control" style="display: table; margin: auto; " type="text" value="" placeholder="Titulo da campanha">
+				<br>
+				<input  required id="buttonTitle" class="form-control" style="display: table; margin: auto; " type="text" value="" placeholder="Titulo do Botao">
+				<br>
+				<input required  id="imgTitle" class="form-control" style="display: table; margin: auto; " type="text" value="" placeholder="Ruta da Imagen a Anexar">
+				<br>
+				
+				<button id="button" class="btn btn-lg btn-primary btn-default" style="display: table; margin: auto; ">1º Gerar URL</button>
 				
 			</div>
 			
@@ -37,15 +45,18 @@
 				<br>
 				<h3 style="color: white">Este é seu link criptografado:</h3>
 				<br>
+
+				<div class="col-xs-5">
+					<button id="copyButton" class="btn btn-lg btn-primary btn-default" style="display:table; margin-left: auto; margin-top: 3vh" data-clipboard-action="copy" data-clipboard-target="#output">2º Copiar URL</button>
+				</div>
+
 				<div class="col-xs-7" style="padding: 0">
 				<textarea name="" id="output" rows="4" style="width: 100%; text-align: center; display: inline;">
 					
 				</textarea>
 				</div>
 
-				<div class="col-xs-5">
-					<button id="copyButton" class="btn btn-lg btn-primary btn-default" style="display:table; margin-right: auto; margin-top: 2vh" data-clipboard-action="copy" data-clipboard-target="#output">2º Copiar</button>
-				</div>
+				
 			</div>
 		</div>
 				
@@ -56,15 +67,21 @@
 <script>
 				
 		var inputURL = document.getElementById("input");
+		var campaingTitle = document.getElementById("campaingTitle");
+		var buttonTitle = document.getElementById("buttonTitle");
+		var imgTitle = document.getElementById("imgTitle");
+
 		var button =  document.getElementById("button");
 		var outputURL =  document.getElementById("output");
 
 		button.addEventListener("click", function(){
 
+
 			// i have the url coded
 			var codedURL = btoa(inputURL.value); 
+			var codedImg = btoa(imgTitle.value); 
 
-			outputURL.innerHTML = "app.spinver.com?url=" + codedURL;
+			outputURL.innerHTML = "localhost:8000?url=" + codedURL + "&campaing_title=" + campaingTitle.value + "&button_title=" + buttonTitle.value + "&img_title=" + codedImg;
 
 			
 		});
